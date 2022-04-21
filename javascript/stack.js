@@ -1,24 +1,25 @@
-// const prompt = require('prompt-sync')();
-const readline = require('readline').createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+const prompt = require('prompt-sync')();
 
-function getInput(question) {
-    let data;
-    readline.question(question, element => {
-        // console.log(`Hey there ${name}!`);
-        data = element;
-        readline.close();
-    });
-    return data;
+let stack = [1, 2, 3];
+
+console.log('length', stack.length)
+
+push = (data) => {
+    stack.push(data);
 }
 
-let stack = [];
-
-push = () => {
-
+pop = () => {
+    stack.pop();
 }
 
-let choice = getInput('choose operation 1->push | 2->pop | 3->quit')
-console.log(choice)
+const operation = prompt('choose operation 1->push | 2->pop | 3->quit');
+console.log(operation == 1);
+
+if (operation == 1) {
+    const data = prompt('enter element to be pushed');
+    push(data);
+    prompt(`stack is ${stack}`)
+} else if (operation == 2) {
+    pop();
+    prompt(`stack is ${stack}`)
+}
