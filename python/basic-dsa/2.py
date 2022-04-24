@@ -16,6 +16,7 @@ for i in range(0, n):
 
 num.sort()
 
+
 for i in range(0, count_zero):
     num.append(0)
 
