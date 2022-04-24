@@ -34,7 +34,7 @@ print(item2.price)
 
 # To print all instances of class manually
 # for instance in Item.all:
-#     print(instance.name)
+#     print(f"Item ('{instance.name}', {instance.price}, {instance.quantity})")
 
 # To print all instances of call using inbuilt methods
 print(Item.all)
