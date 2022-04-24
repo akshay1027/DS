@@ -1,5 +1,4 @@
 # Print array in interchange format
-
 # Exp :
 # Arr1 = [ 1,2,3,4,5]
 # Arr2 = [ 7,8,9]
