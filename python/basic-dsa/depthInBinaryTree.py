@@ -10,7 +10,7 @@ class TreeNode:
 
 
 class Solution:
-    # recursive BFS solution
+    # recursive DFS solution
     def maxDepth(self, root: TreeNode) -> int:
         if not root:
             return 0
@@ -30,6 +30,6 @@ class Solution:
                     q.append(node.left)
                 if node.right:
                     q.append(node.right)
-                level += 1
+            level += 1
 
         return level
