@@ -66,3 +66,14 @@ for i in range(0, n):
 
 for i in range(j):
     print(nums[i])
+
+# solution using hashmap
+
+# hm = {i: 0 for i in nums}
+
+# for i in range(0, len(nums)):
+#     if hm[nums[i]] == 1:
+#         return True
+#     hm[nums[i]] = 1
+
+# return False
