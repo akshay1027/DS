@@ -1,13 +1,12 @@
 str = ["lintdsklfjelkgjelgk", "code", "love", "you"]
 encodedStr = ""
-for i in range(len(str)):
-    codeOne = len(str[i])
+for s in str:
+    codeOne = len(s)
     #codeOne = str(codeOneNum)
     codeTwo = "$"
-    tempStr = f'{codeOne}' + codeTwo + str[i]
-    encodedStr += tempStr
-print(encodedStr)
+    encodedStr += f'{codeOne}' + codeTwo + s
 
+print(encodedStr)
 
 decodedStr, i = [], 0
 while i < len(encodedStr):
@@ -15,8 +14,6 @@ while i < len(encodedStr):
     while encodedStr[j] != "$":
         j += 1
     length = int(encodedStr[i:j])
-    # y = ''.join(temp)
-    # length = int(y)
 
     decodedStr.append(encodedStr[j + 1: j + 1 + length])
     i = j + 1 + length
