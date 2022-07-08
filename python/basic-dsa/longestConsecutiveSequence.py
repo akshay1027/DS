@@ -7,9 +7,9 @@ class Solution:
 
         for n in nums:
             if (n-1) not in numSet:
-                countLocalSequence = 0
-                while(n+countLocalSequence in numSet):
-                    countLocalSequence += 1
-                longestSequence = max(longestSequence, countLocalSequence)
+                currentSequence = 0
+                while(n+currentSequence in numSet):
+                    currentSequence += 1
+                longestSequence = max(longestSequence, currentSequence)
 
         return longestSequence
