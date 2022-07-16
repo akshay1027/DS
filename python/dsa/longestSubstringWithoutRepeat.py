@@ -9,8 +9,11 @@ class Solution:
             if s[r] not in map:
                 count = max(count, r-l + 1)
             else:
+                # if the character is outside window, we need not move the left pointer
                 if map[s[r]] < l:
                     count = max(count, r-l + 1)
+
+                # if the character is inside window, we move left pointer to next index after its value in
                 else:
                     l = map[s[r]] + 1
             map[s[r]] = r
