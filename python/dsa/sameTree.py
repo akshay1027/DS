@@ -11,9 +11,15 @@ class TreeNode:
 
 class Solution:
     def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+        # if p and q:
+        #print(p.val, " | ", q.val)
+
+        # base case to stop recursion
         if not p and not q:
             return True
+
+        # this is wrong case
         if not p or not q:
             return False
-        if p.val == q.val:
+        if p and q and p.val == q.val:
             return (self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right))
