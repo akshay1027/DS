@@ -24,6 +24,8 @@ ds = []
 
 printS(0, n, arr, sum, 0, ds)
 
+# o/p => [1, 1], [2]
+
 
 '''    
     Time Complexity : O(2^N)
