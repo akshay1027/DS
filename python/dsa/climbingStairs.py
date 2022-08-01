@@ -2,6 +2,9 @@
 
 from functools import lru_cache
 
+# recursion + memoization but space = o(n) + o(n) ( recursion stack space + memoization space)
+# to remove stack and memoization space, we need to convert into loop form
+
 
 class Solution:
     def __init__(self):
