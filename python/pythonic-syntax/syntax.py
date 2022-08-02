@@ -44,3 +44,9 @@ print(nums[::-1])
 hash = {'a': 3, 'b': 1, 'c': 8, 'd': 6}
 arr = sorted(hash, key=hash.get, reverse=True)
 print(arr)  # ['c', 'd', 'a', 'b']
+
+
+# create a 2D array
+rows, cols = (2, 3)
+arr = [[0]*cols]*rows
+print(arr)  # [[0, 0, 0], [0, 0, 0]]
