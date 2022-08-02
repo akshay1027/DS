@@ -47,6 +47,7 @@ print(arr)  # ['c', 'd', 'a', 'b']
 
 
 # create a 2D array
-rows, cols = (2, 3)
-arr = [[0]*cols]*rows
-print(arr)  # [[0, 0, 0], [0, 0, 0]]
+row = 2
+col = 3
+dp = [[-1 for _ in range(col)] for _ in range(row)]
+print(dp)
