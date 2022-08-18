@@ -1,4 +1,17 @@
+from collections import deque
+
+
 class Solution:
+    def findTheWinner(self, n: int, k: int) -> int:
+        nums = deque(range(1, n+1))
+        print(nums)
+        while len(nums) > 1:
+            # if arg inside rotate is negative value => shift in left, postive => shift in right
+            nums.rotate(1-k)
+            nums.popleft()
+            # print(nums)
+        return nums[0]
+
     def findTheWinner(self, n: int, k: int) -> int:
         setDs = sorted(set(range(1, n + 1)))
         print(setDs)
