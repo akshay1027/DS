@@ -1,7 +1,6 @@
 class Solution:
     #ans = []
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
-        ds = []
         ans = []
         self.helper(candidates, target, [], ans, 0)
         return ans

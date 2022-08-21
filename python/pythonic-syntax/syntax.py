@@ -23,6 +23,7 @@ n1, n2 = 2, 3
 for i, j in zip(range(0, n2), range(1, n2)):
     pass
 
+
 # but normally we prefer having just a pointer outside
 j = 1
 for i in range(0, n2):
@@ -51,3 +52,13 @@ row = 2
 col = 3
 dp = [[-1 for _ in range(col)] for _ in range(row)]
 print(dp)
+
+
+# remove element from hashmap/dict
+countries = {"Ghana": "Accra", "China": "Beijing"}
+countries.pop("Chana")
+
+
+# intialise 1 to 3
+myDict = {x: x for x in range(1, 4)}
+print(myDict)  # {1:1, 2:2, 3:3}

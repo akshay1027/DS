@@ -1,5 +1,8 @@
 # https://leetcode.com/problems/product-of-array-except-self/discuss/1597994/C%2B%2BPython-4-Simple-Solutions-w-Explanation-or-Prefix-and-Suffix-product-O(1)-space-approach
 
+from functools import reduce
+
+
 class Solution:
 
     def productExceptSelf(self, nums):
@@ -36,10 +39,7 @@ class Solution:
         # if no zero exists
         if not flag:
             for i in range(len(nums)):
-                if prod == 0:
-                    nums[i] = 0
-                else:
-                    nums[i] = prod // nums[i]
+                nums[i] = prod // nums[i]
         # if zero exists, 2 cases -> 1 zero or more than 1 zero
         else:
             for i in range(len(nums)):
