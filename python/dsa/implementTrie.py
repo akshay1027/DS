@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/implement-trie-prefix-tree/k
+# https://leetcode.com/problems/implement-trie-prefix-tree/discuss/362916/Simple-Python-solution-(beats-99-runtime-95-memory)
 # we use trie to build search feature and autocomplete.
 
 # Your Trie object will be instantiated and called as such:
@@ -8,6 +9,8 @@
 # param_3 = obj.startsWith(prefix)
 
 class Trie(object):
+
+    # uisng "-" to indicate end of word
 
     def __init__(self):
         self.trie = {}
