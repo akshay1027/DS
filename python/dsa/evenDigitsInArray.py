@@ -3,7 +3,6 @@ class Solution:
     # print(~12 & 1) # op: 1
 
     def findNumbers(self, nums: List[int]) -> int:
-
         res = 0
         for num in nums:
             print(~len(str(num)))
