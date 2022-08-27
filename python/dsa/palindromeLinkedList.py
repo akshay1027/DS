@@ -26,14 +26,17 @@ class Solution:
             q.append(head.val)
             head = head.next
 
-        if len(q) % 2 == 0:
-            flag = 0
-        else:
-            flag = 1
+        # if len(q) % 2 == 0:
+        #     flag = 0
+        # else:
+        #     flag = 1
+
+        # Tried with some cases, there no need to check for flag, we can directly check for 0 or 1
+        # [1, 2, 3, 2, 1] -> [2, 3, 2] -> [3]
 
         while len(q) != 0:
             # print(q)
-            if len(q) == flag:
+            if len(q) == 0 or len(q) == 1:
                 return True
 
             temp = q.pop()
