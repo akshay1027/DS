@@ -58,6 +58,10 @@ print(dp)
 countries = {"Ghana": "Accra", "China": "Beijing"}
 countries.pop("Chana")
 
+# Highest key in hashmap
+Tv = {'BreakingBad': 100, 'GameOfThrones': 1292, 'TMKUC': 88}
+Keymax = max(zip(Tv.values(), Tv.keys()))[1]
+print(Keymax)  # GameOfThrones
 
 # intialise 1 to 3
 myDict = {x: x for x in range(1, 4)}
