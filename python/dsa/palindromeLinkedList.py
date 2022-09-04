@@ -22,6 +22,7 @@ class Solution:
         if head.next == None:
             return True
         q = deque()
+
         while head:
             q.append(head.val)
             head = head.next
@@ -36,7 +37,7 @@ class Solution:
 
         while len(q) != 0:
             # print(q)
-            if len(q) == 0 or len(q) == 1:
+            if len(q) == 1:
                 return True
 
             temp = q.pop()
