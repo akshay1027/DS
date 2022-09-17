@@ -30,6 +30,10 @@ for i in range(0, n2):
     j += 1
     pass
 
+# reverse loop
+N = [1, 2, 3, 4]
+for num in range(N, -1, -1):
+    print(num, end=" ")
 
 count = {}
 for right in range(len(nums)):
