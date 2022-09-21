@@ -4,7 +4,6 @@
 # Function to check if all the
 # string characters are unique
 def check(s):
-
     a = set()
 
     # Check for repetition in
@@ -25,6 +24,7 @@ def helper(arr, ind):
 
     # Base case
     if (ind == len(arr)):
+        # print(tmp)
         return [""]
 
     # Consider every string as
@@ -32,6 +32,7 @@ def helper(arr, ind):
     # store the generated string
     tmp = helper(arr, ind + 1)
 
+    print(tmp)
     ret = tmp
 
     # Add current string to result of
@@ -50,9 +51,8 @@ def helper(arr, ind):
 
 
 def maxLength(arr):
-
+    # print(arr)
     tmp = helper(arr, 0)
-
     l = 0
 
     # Return max length possible
@@ -66,9 +66,8 @@ def maxLength(arr):
 # Driver Code
 if __name__ == '__main__':
 
-    s = []
-    s.append("abcdefgh")
+    s = ["ab", "cd", "ab"]
+    # s.append("abcadefgh")
+    # s.append("xyzaq")
 
     print(maxLength(s))
-
-# This code is contributed by pratham76
