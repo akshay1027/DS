@@ -15,7 +15,7 @@ def helper(a):
 
     # return i
 
-    # i = 0 -> 7
+    # i = 0 -> 6
     for i in range(0, l):
         if i+1 != a[i]:
             return i+1
