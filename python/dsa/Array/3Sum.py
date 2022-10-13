@@ -26,3 +26,16 @@ class Solution:
                     mid += 1
                     right -= 1
         return result
+
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        res = set()
+        for i in range(len(nums)):
+            target = 0 - nums[i]
+            s = {}
+            for j in range(i+1, len(nums)):
+                if nums[j] in s:
+                    comb = [nums[i], target-nums[j], nums[j]]
+                    res.add(tuple(sorted(comb)))
+                else:
+                    s[target - nums[j]] = 0
+        return res

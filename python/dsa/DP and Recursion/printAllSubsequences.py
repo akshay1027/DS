@@ -4,10 +4,12 @@ def helper(i, ds, ans, stri, n):
         ans.append("".join(ds))
         return
 
+    # pick
     ds.append(stri[i])
     helper(i+1, ds, ans, stri, n)
     ds.pop()
 
+    # not pick
     helper(i+1, ds, ans, stri, n)
 
     return ans
