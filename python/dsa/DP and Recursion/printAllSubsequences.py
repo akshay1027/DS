@@ -1,16 +1,16 @@
-def helper(i, ds, ans, stri, n):
+def helper(i, ds, ans, str, n):
     if i == n:
         # print(ds)
         ans.append("".join(ds))
         return
 
     # pick
-    ds.append(stri[i])
-    helper(i+1, ds, ans, stri, n)
+    ds.append(str[i])
+    helper(i+1, ds, ans, str, n)
     ds.pop()
 
     # not pick
-    helper(i+1, ds, ans, stri, n)
+    helper(i+1, ds, ans, str, n)
 
     return ans
 
