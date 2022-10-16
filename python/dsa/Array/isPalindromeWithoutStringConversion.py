@@ -35,7 +35,7 @@ def isPalindrome(n):
 
 
 # Driver code
-if(isPalindrome(1001)):
+if(isPalindrome(10901)):
     print('Yes, it is palindrome')
 else:
     print('No, not palindrome')
