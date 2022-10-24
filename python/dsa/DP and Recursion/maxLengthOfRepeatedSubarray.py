@@ -22,10 +22,10 @@ class Solution:
 
 # recursion + memoization
 class Solution:
-    class Sol:
-        length = 0
+    def __init__(self):
+        self.length = 0
 
-    def helper(self, i1, i2, a1, a2, dp, ans):
+    def helper(self, i1, i2, a1, a2, dp):
         if i1 < 0 or i2 < 0:
             return 0
 
@@ -34,23 +34,18 @@ class Solution:
 
         #length = 0
         if a1[i1] == a2[i2]:
-            dp[i1][i2] = 1 + self.helper(i1-1, i2-1, a1, a2, dp, ans)
-            ans.length = max(ans.length, dp[i1][i2])
+            dp[i1][i2] = 1 + self.helper(i1-1, i2-1, a1, a2, dp)
+            self.length = max(self.length, dp[i1][i2])
 
-        self.helper(i1-1, i2, a1, a2, dp, ans)
-        self.helper(i1, i2-1, a1, a2, dp, ans)
+        self.helper(i1-1, i2, a1, a2, dp)
+        self.helper(i1, i2-1, a1, a2, dp)
 
-        #dp[i1][i2] = length
-
-        return dp[i1][i2]
+        return self.length
 
     def findLength(self, nums1: List[int], nums2: List[int]) -> int:
         n1 = len(nums1)
         n2 = len(nums2)
-        ans = self.Sol()
 
-        dp = [[-1 for _ in range(n2 + 1)] for _ in range(n1 + 1)]
+        dp = [[-1 for _ in range(n2+1)] for _ in range(n1+1)]
 
-        self.helper(n1-1, n2-1, nums1, nums2, dp, ans)
-
-        return ans.length
+        return self.helper(n1-1, n2-1, nums1, nums2, dp)
