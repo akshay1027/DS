@@ -1,6 +1,8 @@
 class Solution:
     def maxLength(self, arr: List[str]) -> int:
         maxlen = 0
+
+        # epome oru variable vechi veldrom, enga max length naraya combinations le varalam nalla oru array vechi veladrom
         unique = ['']
 
         for word in arr:
