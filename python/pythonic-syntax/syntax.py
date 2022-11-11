@@ -70,3 +70,9 @@ print(Keymax)  # GameOfThrones
 # intialise 1 to 3
 myDict = {x: x for x in range(1, 4)}
 print(myDict)  # {1:1, 2:2, 3:3}
+
+
+# remove 2nd index char in string
+str = "akshay"
+str = str[:2] + str[3:]
+print(str)  # akhay
