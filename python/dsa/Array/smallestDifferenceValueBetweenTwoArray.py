@@ -14,8 +14,10 @@ res = sys.maxsize
 i, j = 0, 0
 
 while i < l1 and j < l2:
-    if abs(a1[i] - a2[j]) < res:
-        res = abs(a1[i] - a2[j])
+    # if abs(a1[i] - a2[j]) < res:
+    #     res = abs(a1[i] - a2[j])
+
+    res = min(abs(a1[i] - a2[j]), res)
 
     if a1[i] > a2[j]:
         j += 1
